@@ -136,8 +136,8 @@ const Home: FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="relative py-24 bg-white z-10 overflow-hidden xl:px-32">
-        <div className="mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 p-20 sm:px-[10px]">
+      <section className="relative py-32 bg-white z-10 overflow-hidden xl:px-32">
+        <div className="mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-[10px]">
           <div className="relative">
             {/* Decorative Circle */}
             <div
@@ -188,7 +188,7 @@ const Home: FC = () => {
       </section>
 
       {/* Supported Wallets & Services */}
-      <section className="py-16 bg-white px-32">
+      <section className="py-32 bg-white px-32">
         <div className="justify-between items-center flex flex-col md:flex-row gap-6">
           <Image src={Metamask} alt="Metamask" />
           <Image src={Coinbase} alt="Coinbase Wallet" />
@@ -200,7 +200,7 @@ const Home: FC = () => {
       {/* Products Section */}
       <section
         ref={videoRef}
-        className="relative py-16 bg-white overflow-hidden"
+        className="relative py-16 bg-white overflow-hidden xl:px-32"
       >
         <GridPattern
           className={cn(
@@ -208,14 +208,14 @@ const Home: FC = () => {
           )}
         />
         {/* Decorative Elements */}
-        <div className="absolute top-0 left-0 transform -translate-y-10 translate-x-6">
+        <div className="hidden sm:hidden md:hidden lg:hidden xl:block absolute top-0 left-0 transform -translate-y-10 translate-x-6">
           <Image src={SmallCircle2} alt="Circle Decorative" />
         </div>
         <div
           style={{
             zIndex: 100,
           }}
-          className="absolute top-0 left-0 transform -translate-y-0 translate-x-24"
+          className="hidden sm:hidden md:hidden lg:hidden xl:block absolute top-0 left-0 transform -translate-y-0 translate-x-24"
         >
           <Image src={SmallCircle1} alt="Circle Decorative" />
         </div>
@@ -223,7 +223,7 @@ const Home: FC = () => {
           <Image src={BigCircleProduct} alt="Big Circle Product" />
         </div>
 
-        <div className="background-glass max-w-6xl mx-auto border border-gray-200 p-6 relative rounded-xl">
+        <div className="background-glass mx-auto border border-gray-200 p-6 relative rounded-xl mx-[10px]">
           {/* Section Title with Border Line */}
           <div className="justify-start items-center gap-4 flex mb-6">
             <h2 className="text-end text-[#8c8c8c] text-xl font-semibold relative">
