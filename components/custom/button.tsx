@@ -6,17 +6,20 @@ interface ButtonProps {
   label: string;
   backgroundColor?: string;
   isTransparent?: boolean;
+  handleClick?: any;
 }
 
 const ArrowButton: FC<ButtonProps> = ({
   label,
   backgroundColor = "",
   isTransparent = false,
+  handleClick,
 }) => {
   const [hover, setHover] = useState(false);
 
   return (
     <button
+      onClick={handleClick}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       style={{

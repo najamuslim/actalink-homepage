@@ -23,6 +23,8 @@ import BigCircleProduct from "../app/assets/big-circle-product.svg";
 import Empower from "../app/assets/Empower.svg";
 import SmallCircle1 from "../app/assets/small-circle-product-1.svg";
 import SmallCircle2 from "../app/assets/small-circle-product-2.svg";
+import Billing from "../app/assets/billing.jpg";
+import Scheduled from "../app/assets/scheduled.jpg";
 
 import { IconsDock, IconsOrbit } from "./assets";
 
@@ -71,10 +73,17 @@ const Home: FC = () => {
           <a href="#" className="text-gray-600 hidden md:block">
             Schedule a Demo
           </a>
-          <a href="#" className="text-gray-600">
+          <a
+            href="#"
+            className="text-gray-600"
+            onClick={() => window.open("https://docs.acta.link/docs/")}
+          >
             Docs
           </a>
-          <Button className="hidden md:block hover:bg-[#B5EF21] hover:text-black">
+          <Button
+            className="hidden md:block hover:bg-[#B5EF21] hover:text-black"
+            onClick={() => window.open("https://dapp.acta.link/")}
+          >
             Launch App
           </Button>
         </nav>
@@ -100,8 +109,13 @@ const Home: FC = () => {
               label="Launch App"
               backgroundColor={"#B5EF21"}
               isTransparent={false}
+              handleClick={() => window.open("https://dapp.acta.link/")}
             />
-            <ArrowButton label="Schedule a Demo" isTransparent />
+            <ArrowButton
+              label="Schedule a Demo"
+              isTransparent
+              handleClick={() => window.open("mailto:pr@acta.link")}
+            />
           </div>
         </div>
 
@@ -278,7 +292,7 @@ const Home: FC = () => {
 
             {/* Right: Image */}
             <div className="flex justify-center md:justify-end">
-              <HeroVideoDialog
+              {/* <HeroVideoDialog
                 ref={videoDialogRef} // Attach ref here
                 className="dark:hidden block"
                 animationStyle="top-in-bottom-out"
@@ -293,7 +307,8 @@ const Home: FC = () => {
                 videoSrc="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb"
                 thumbnailSrc="https://startup-template-sage.vercel.app/hero-dark.png"
                 thumbnailAlt="Hero Video"
-              />
+              /> */}
+              <Image src={Scheduled} alt="Scheduled Payments" />
             </div>
           </div>
 
@@ -301,7 +316,7 @@ const Home: FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 mb-12 xl:flex-col-reverse">
             {/* Right: Image */}
             <div className="flex justify-center md:justify-start">
-              <HeroVideoDialog
+              {/* <HeroVideoDialog
                 ref={videoDialogRef} // Attach ref here
                 className="dark:hidden block"
                 animationStyle="top-in-bottom-out"
@@ -316,7 +331,8 @@ const Home: FC = () => {
                 videoSrc="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb"
                 thumbnailSrc="https://startup-template-sage.vercel.app/hero-dark.png"
                 thumbnailAlt="Hero Video"
-              />
+              /> */}
+              <Image height={400} width={588} src={Billing} alt="Billing" />
             </div>
 
             {/* Left: Description */}
@@ -554,7 +570,11 @@ const Home: FC = () => {
 
           {/* Tombol Schedule a Demo */}
           <div className="mt-8 flex justify-center">
-            <ArrowButton label="Schedule a Demo" backgroundColor={"#B5EF21"} />
+            <ArrowButton
+              label="Schedule a Demo"
+              backgroundColor={"#B5EF21"}
+              handleClick={() => window.open("mailto:pr@acta.link")}
+            />
           </div>
         </div>
       </section>
@@ -570,13 +590,13 @@ const Home: FC = () => {
 
         {/* Menu Links */}
         <div className="flex space-x-6 mt-4 text-gray-600">
-          <a href="#" className="hover:text-black">
+          <a href="https://docs.acta.link/docs/" className="hover:text-black">
             Docs
           </a>
-          <a href="#" className="hover:text-black">
+          <a href="mailto:pr@acta.link" className="hover:text-black">
             Support
           </a>
-          <a href="#" className="hover:text-black">
+          <a href="mailto:pr@acta.link" className="hover:text-black">
             Contact Us
           </a>
           <a href="#" className="hover:text-black">
@@ -588,16 +608,30 @@ const Home: FC = () => {
         <div className="flex space-x-4">
           <Dock direction="middle">
             <DockIcon>
-              <IconsDock.gitHub className="size-6" />
+              <IconsDock.gitHub
+                onClick={() => window.open("https://github.com/actalink")}
+                className="size-6"
+              />
             </DockIcon>
             <DockIcon>
-              <IconsDock.linkedin className="size-6" />
+              <IconsDock.linkedin
+                onClick={() =>
+                  window.open("https://www.linkedin.com/company/actalink/")
+                }
+                className="size-6"
+              />
             </DockIcon>
             <DockIcon>
-              <IconsDock.twitter className="size-6" />
+              <IconsDock.twitter
+                onClick={() => window.open("https://x.com/0xActalink")}
+                className="size-6"
+              />
             </DockIcon>
             <DockIcon>
-              <IconsDock.email className="size-6" />
+              <IconsDock.email
+                onClick={() => (window.location.href = "mailto:pr@acta.link")}
+                className="size-6"
+              />
             </DockIcon>
           </Dock>
         </div>
