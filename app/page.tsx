@@ -332,7 +332,7 @@ const Home: FC = () => {
                 thumbnailSrc="https://startup-template-sage.vercel.app/hero-dark.png"
                 thumbnailAlt="Hero Video"
               /> */}
-              <Image height={400} width={588} src={Billing} alt="Billing" />
+              <Image src={Billing} alt="Billing" />
             </div>
 
             {/* Left: Description */}
