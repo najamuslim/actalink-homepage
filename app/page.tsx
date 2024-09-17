@@ -136,8 +136,8 @@ const Home: FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="relative py-16 bg-white z-10 overflow-hidden">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+      <section className="relative py-24 bg-white z-10 overflow-hidden xl:px-32">
+        <div className="mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 p-20 sm:px-[10px]">
           <div className="relative">
             {/* Decorative Circle */}
             <div
