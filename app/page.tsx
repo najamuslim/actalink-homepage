@@ -85,7 +85,7 @@ const Home: FC = () => {
             Docs
           </a>
           <Button
-            className="hidden md:block hover:bg-[#B5EF21] hover:text-black"
+            className="hidden md:block hover:bg-[#B5EF21] hover:text-black hover:border hover:border-black"
             onClick={() => window.open("https://dapp.acta.link/")}
           >
             Launch App
@@ -108,7 +108,7 @@ const Home: FC = () => {
             Actalink simplifies crypto transfers and scheduling, making Web3
             financial management easier than ever.
           </p>
-          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4">
+          <div className="flex flex-col xl:flex-row items-center xl:items-start space-y-4 md:space-y-0 space-x-0 md:space-x-4 gap-2">
             <ArrowButton
               label="Launch App"
               backgroundColor={"#B5EF21"}
@@ -132,7 +132,7 @@ const Home: FC = () => {
           style={{
             zIndex: 10,
           }}
-          className="hidden xl:flex flex-1 overflow-hidden flex-col justify-center px-10 py-10 bg-white rounded-2xl border-4 border-solid border-stone-950 shadow-[-4px_4px_0px_rgba(181,239,33,1),-8px_8px_0px_#000]"
+          className="hidden xl:flex flex-1 overflow-hidden flex-col justify-center px-10 py-10 bg-white max-h-[451px] max-w-[453px] rounded-2xl border-4 border-solid border-stone-950 shadow-[-4px_4px_0px_rgba(181,239,33,1),-8px_8px_0px_#000]"
         >
           <Image
             loading="lazy"
@@ -256,7 +256,7 @@ const Home: FC = () => {
           {/* First Product: Schedule Payments */}
           <div className="flex flex-col md:flex-row md:justify-between mb-12">
             {/* Left: Description */}
-            <div className="flex-col justify-between items-start flex md:pr-16 md:mb-10 md:self-center">
+            <div className="flex-1 flex-col justify-between items-start flex md:pr-16 md:mb-10 md:self-center">
               <div className="justify-start items-center flex hidden sm:flex w-max">
                 <div className="text-[#333333] text-3xl font-semibold">
                   Schedule Payments
@@ -343,7 +343,7 @@ const Home: FC = () => {
             </div>
 
             {/* Right: Image */}
-            <div className="flex justify-center md:justify-end">
+            <div className="flex flex-1 justify-center md:justify-end">
               {/* <HeroVideoDialog
                 ref={videoDialogRef} // Attach ref here
                 className="dark:hidden block"
@@ -367,7 +367,7 @@ const Home: FC = () => {
           {/* Second Product: Billing */}
           <div className="flex flex-col-reverse md:flex-row md:justify-between mb-12">
             {/* Right: Image */}
-            <div className="flex justify-center md:justify-start">
+            <div className="flex flex-1 justify-center md:justify-start">
               {/* <HeroVideoDialog
                 ref={videoDialogRef} // Attach ref here
                 className="dark:hidden block"
@@ -388,7 +388,7 @@ const Home: FC = () => {
             </div>
 
             {/* Left: Description */}
-            <div className="flex-col justify-between items-start flex md:pl-8 xl:mb-10 xl:self-center mt-10">
+            <div className="flex-1 flex-col justify-between items-start flex md:pl-8 xl:mb-10 xl:self-center mt-10">
               <div className="justify-start items-center flex mb-4 hidden sm:flex">
                 <div className="text-[#333333] text-3xl font-semibold">
                   Billing
@@ -680,7 +680,7 @@ const Home: FC = () => {
           <a href="mailto:pr@acta.link" className="hover:text-black">
             Contact Us
           </a>
-          <a href="#" className="hover:text-black">
+          <a href="mailto:pr@acta.link" className="hover:text-black">
             Privacy Policy
           </a>
         </div>
@@ -709,10 +709,9 @@ const Home: FC = () => {
               />
             </DockIcon>
             <DockIcon>
-              <IconsDock.email
-                onClick={() => (window.location.href = "mailto:pr@acta.link")}
-                className="size-6"
-              />
+              <a href="mailto:pr@acta.link" className="size-8">
+                <IconsDock.email className="size-6" />
+              </a>
             </DockIcon>
           </Dock>
         </div>

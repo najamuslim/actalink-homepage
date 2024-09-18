@@ -29,7 +29,7 @@ const ArrowButton: FC<ButtonProps> = ({
       className={`
         ${isTransparent ? "text-black" : "text-black"} 
         px-6 py-2 rounded-md font-semibold flex items-center justify-center 
-        transition-all duration-300 ease-in-out
+        transition-all duration-700 ease-in-out
         ${
           !isTransparent &&
           (hover
@@ -41,7 +41,7 @@ const ArrowButton: FC<ButtonProps> = ({
       {label}
       <span className="ml-2">
         {hover ? (
-          <ArrowRight className="w-5 h-5 transition-transform duration-300" />
+          <ArrowRight className="w-5 h-5 transition-transform duration-700" />
         ) : (
           <ArrowUpRight className="w-5 h-5 transition-transform duration-300" />
         )}
