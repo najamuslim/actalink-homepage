@@ -15,10 +15,10 @@ import CashBank from "../app/assets/tabler-icon-cash-banknote.svg";
 import HomeStats from "../app/assets/tabler-icon-home-stats.svg";
 import Lock from "../app/assets/tabler-icon-lock.svg";
 import Web3Excellence from "../app/assets/web3-excellence.svg";
-import Metamask from "../app/assets/metamask.jpg";
-import Rainbow from "../app/assets/rainbow.jpg";
-import Coinbase from "../app/assets/coinbase.jpg";
-import WalletConnect from "../app/assets/wallet-connect.jpg";
+import Metamask from "../app/assets/metamask.svg";
+import Rainbow from "../app/assets/rainbow.svg";
+import Coinbase from "../app/assets/coinbase.svg";
+import WalletConnect from "../app/assets/wallet-connect.svg";
 import BigCircleProduct from "../app/assets/big-circle-product.svg";
 import Empower from "../app/assets/Empower.svg";
 import SmallCircle1 from "../app/assets/small-circle-product-1.svg";
@@ -530,6 +530,7 @@ const Home: FC = () => {
           <div
             style={{
               lineHeight: 4,
+              zIndex: 20,
             }}
             className="text-center"
           >
