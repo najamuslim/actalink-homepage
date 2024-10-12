@@ -85,7 +85,7 @@ const Home: FC = () => {
             Docs
           </a>
           <Button
-            className="hidden md:block hover:bg-[#B5EF21] hover:text-black hover:border hover:border-black"
+            className="hidden md:block hover:bg-[#B5EF21] hover:text-black border hover:border-black"
             onClick={() => window.open("https://dapp.acta.link/")}
           >
             Launch App
@@ -104,7 +104,7 @@ const Home: FC = () => {
           >
             Empower Your Finances with <br /> Seamless Crypto Payments
           </h1>
-          <p className="text-sm sm:text-xl md:text-xl lg:text-2xl xl:text-2xl text-gray-600 mb-6 leading-relaxed text-center xl:text-start">
+          <p className="text-sm sm:text-xl md:text-xl lg:text-xl xl:text-xl text-gray-600 mb-6 leading-relaxed text-center xl:text-start">
             Actalink simplifies crypto transfers and scheduling, making Web3
             financial management easier than ever.
           </p>
@@ -686,34 +686,33 @@ const Home: FC = () => {
         </div>
 
         {/* Social Icons */}
-        <div className="flex space-x-4">
-          <Dock direction="middle">
-            <DockIcon>
-              <IconsDock.gitHub
-                onClick={() => window.open("https://github.com/actalink")}
-                className="size-6"
-              />
-            </DockIcon>
-            <DockIcon>
-              <IconsDock.linkedin
-                onClick={() =>
-                  window.open("https://www.linkedin.com/company/actalink/")
-                }
-                className="size-6"
-              />
-            </DockIcon>
-            <DockIcon>
-              <IconsDock.twitter
-                onClick={() => window.open("https://x.com/0xActalink")}
-                className="size-6"
-              />
-            </DockIcon>
-            <DockIcon>
-              <a href="mailto:pr@acta.link" className="size-8">
-                <IconsDock.email className="size-6" />
-              </a>
-            </DockIcon>
-          </Dock>
+        <div className="flex items-center space-x-4 mt-4 lg:mt-0 p-2 border rounded-lg">
+          <a href="#">
+            <IconsDock.gitHub
+              onClick={() => window.open("https://github.com/actalink")}
+              className="size-6"
+            />
+          </a>
+          <a href="#">
+            <IconsDock.linkedin
+              onClick={() =>
+                window.open("https://www.linkedin.com/company/actalink/")
+              }
+              className="size-8"
+            />
+          </a>
+          <a href="#">
+            <IconsDock.twitter
+              onClick={() => window.open("https://x.com/0xActalink")}
+              className="size-6"
+            />
+          </a>
+          <a href="#">
+            <IconsDock.email
+              className="size-8"
+              onClick={() => (location.href = "mailto:pr@acta.link")}
+            />
+          </a>
         </div>
       </footer>
     </div>
