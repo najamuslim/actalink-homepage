@@ -1,5 +1,5 @@
 "use client";
-import { FC, useRef } from "react";
+import { FC } from "react";
 import React from "react";
 import ArrowButton from "../components/custom/button";
 import { Button } from "@/components/ui/button";
@@ -29,7 +29,7 @@ import Checked from "../app/assets/checked-icon.svg";
 import { IconsDock, IconsOrbit } from "./assets";
 
 const Home: FC = () => {
-  const videoRef = useRef<HTMLDivElement>(null);
+  //const videoRef = useRef<HTMLDivElement>(null);
   //const videoDialogRef = useRef<any>(null); // Adjust type as necessary
 
   // useEffect(() => {
@@ -204,7 +204,7 @@ const Home: FC = () => {
 
       {/* Products Section */}
       <section
-        ref={videoRef}
+        //ref={videoRef}
         className="relative py-16 bg-white overflow-hidden xl:px-32"
       >
         <GridPattern
@@ -293,7 +293,7 @@ const Home: FC = () => {
                   onClick={() => window.open("https://dapp.acta.link/")}
                   className="bg-black text-white px-4 py-2 hover:bg-[#B5EF21] hover:text-black border hover:border-black"
                 >
-                  Continue to App
+                  Try It Now
                 </Button>
                 <Button
                   onClick={() =>
@@ -403,7 +403,7 @@ const Home: FC = () => {
                   onClick={() => window.open("https://dapp.acta.link/")}
                   className="bg-black text-white px-4 py-2 hover:bg-[#B5EF21] hover:text-black border hover:border-black"
                 >
-                  Continue to App
+                  Try It Now
                 </Button>
                 <Button
                   onClick={() =>
@@ -618,9 +618,6 @@ const Home: FC = () => {
           <a href="https://docs.acta.link/docs/" className="hover:text-black">
             Docs
           </a>
-          <a href="mailto:pr@acta.link" className="hover:text-black">
-            Support
-          </a>
           <a
             href="mailto:pr@acta.link"
             className="hover:text-black text-nowrap"
@@ -637,34 +634,34 @@ const Home: FC = () => {
 
         {/* Social Icons */}
         <div className="flex items-center space-x-4 mt-4 lg:mt-0 p-2 border rounded-lg">
-          <a href="#">
-            <IconsDock.gitHub
-              onClick={() => window.open("https://github.com/actalink")}
-              className="size-8"
+          <div>
+            <IconsDock.discord
+              onClick={() =>
+                window.open("https://discord.com/invite/tVRPdXkwKP")
+              }
+              className="size-8 cursor-pointer"
             />
-          </a>
-          <a href="#">
+          </div>
+          <div>
             <IconsDock.linkedin
               onClick={() =>
                 window.open("https://www.linkedin.com/company/actalink/")
               }
-              className="size-8"
+              className="size-8 cursor-pointer"
             />
-          </a>
-          <a href="#">
+          </div>
+          <div>
             <IconsDock.twitter
               onClick={() => window.open("https://x.com/0xActalink")}
-              className="size-6"
+              className="size-6 cursor-pointer"
             />
-          </a>
-          <a href="#">
-            <IconsDock.youtube
-              className="size-8"
-              onClick={() =>
-                window.open("https://www.youtube.com/@actalink/playlists")
-              }
+          </div>
+          <div>
+            <IconsDock.telegram
+              className="size-8 cursor-pointer"
+              onClick={() => window.open("https://t.me/+tPhqr0mc4C5iY2Zl")}
             />
-          </a>
+          </div>
         </div>
       </footer>
     </div>

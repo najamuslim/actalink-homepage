@@ -6,7 +6,7 @@ interface ButtonProps {
   label: string;
   backgroundColor?: string;
   isTransparent?: boolean;
-  handleClick?: any;
+  handleClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 const ArrowButton: FC<ButtonProps> = ({

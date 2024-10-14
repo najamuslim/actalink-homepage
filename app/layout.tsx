@@ -10,7 +10,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Actalink",
-  description: "Seamless Crypto Payments",
+  description: "Empower Your Finances with Seamless Crypto Payments",
 };
 
 export default function RootLayout({
