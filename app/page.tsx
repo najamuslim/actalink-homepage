@@ -194,11 +194,26 @@ const Home: FC = () => {
 
       {/* Supported Wallets & Services */}
       <section className="py-14 bg-white px-32">
-        <div className="justify-between items-center flex flex-col lg:flex-row gap-6">
-          <Image src={Metamask} alt="Metamask" />
-          <Image className="rounded" src={Coinbase} alt="Coinbase Wallet" />
-          <Image src={WalletConnect} alt="WalletConnect" />
-          <Image src={Rainbow} alt="Rainbow" />
+        <div className="justify-between items-center flex flex-col lg:flex-row gap-10">
+          <Image height={64} width={224} src={Metamask} alt="Metamask" />
+          <Image
+            height={74}
+            width={148}
+            className="rounded"
+            src={Coinbase}
+            alt="Coinbase Wallet"
+          />
+          <Image
+            height={72}
+            width={272}
+            src={WalletConnect}
+            alt="WalletConnect"
+          />
+          <Image
+            className="w-[41px] h[40px] sm:w-[71px] sm:h-[71px]"
+            src={Rainbow}
+            alt="Rainbow"
+          />
         </div>
       </section>
 
