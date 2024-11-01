@@ -24,7 +24,7 @@ const ArrowButton: FC<ButtonProps> = ({
       onMouseLeave={() => setHover(false)}
       style={{
         backgroundColor: isTransparent ? "transparent" : backgroundColor,
-        zIndex: 10,
+        zIndex: 30,
       }} // Apply backgroundColor directly
       className={`
         ${isTransparent ? "text-black" : "text-black"} 
